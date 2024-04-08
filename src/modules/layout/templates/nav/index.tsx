@@ -4,8 +4,9 @@ import { listRegions } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
-import Image from "next/image";
-import Logo from "../../../../../public/images/logo/logo-transparent-png.png";
+import Image from "next/image"
+import Logo from "../../../../../public/images/logo/logo-transparent-png.png"
+import Logo_small from "../../../../../public/images/logo/logo-small.png"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -13,9 +14,18 @@ export default async function Nav() {
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
       <header className="relative h-16 mx-auto border-b duration-200 bg-[#f9f7e9] border-ui-border-base">
-        <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
-
-          <div className="flex items-center h-full">
+        <nav
+          className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
+          <div className="flex md:hidden  items-center h-full">
+            <LocalizedClientLink
+              href="/"
+              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              data-testid="nav-store-link"
+            >
+              <Image src={Logo_small.src} alt={"Logo"} width={50} height={50} />
+            </LocalizedClientLink>
+          </div>
+          <div className="hidden md:flex items-center h-full">
             <LocalizedClientLink
               href="/"
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
@@ -43,13 +53,6 @@ export default async function Nav() {
                 </LocalizedClientLink>
               )}
               <LocalizedClientLink
-                  className="hover:text-ui-fg-base"
-                  href="/store"
-                  data-testid="nav-account-link"
-              >
-                Products
-              </LocalizedClientLink>
-              <LocalizedClientLink
                 className="hover:text-ui-fg-base"
                 href="/account"
                 data-testid="nav-account-link"
@@ -57,6 +60,13 @@ export default async function Nav() {
                 Account
               </LocalizedClientLink>
             </div>
+            <LocalizedClientLink
+              className="hover:text-ui-fg-base"
+              href="/store"
+              data-testid="nav-product-link"
+            >
+              Products
+            </LocalizedClientLink>
             <Suspense
               fallback={
                 <LocalizedClientLink
