@@ -11,7 +11,7 @@ import ProductCarousel from "@modules/home/components/featured-products/product-
 export const metadata: Metadata = {
   title: "Nick's Sweet Treats: Artisanal Cookies Delivered to Your Door",
   description:
-    "Welcome to Nick's Sweet Treats, where every bite is a delight! Indulge in our artisanal cookies, crafted with care and delivered straight to your door. From classic chocolate chip to exotic flavors, there's something for everyone. Order now and treat yourself to the sweetest moments!",
+    "Welcome to Nick's Sweet Treats, where every bite is a delight! From classic chocolate chip to exotic flavors, there's something for everyone. Order now and treat yourself to the sweetest moments!",
 }
 
 const getCollectionsWithProducts = cache(
