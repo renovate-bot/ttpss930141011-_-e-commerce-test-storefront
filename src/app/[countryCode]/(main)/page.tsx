@@ -55,12 +55,12 @@ const getCollectionsWithProducts = cache(
   },
 )
 
-const getProducts = cache(
-  async (countryCode: string) => {
-    const { response } = await getProductsList({ countryCode })
-    return response.products as unknown as Product[]
-  },
-)
+// const getProducts = cache(
+//   async (countryCode: string) => {
+//     const { response } = await getProductsList({ countryCode })
+//     return response.products as unknown as Product[]
+//   },
+// )
 
 export default async function Home({
                                      params: { countryCode },
@@ -68,7 +68,7 @@ export default async function Home({
   params: { countryCode: string }
 }) {
   const collections = await getCollectionsWithProducts(countryCode)
-  const products = await getProducts(countryCode)
+  // const products = await getProducts(countryCode)
   const region = await getRegion(countryCode)
 
   if (!collections || !region) {
