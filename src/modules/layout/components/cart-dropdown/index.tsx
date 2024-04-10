@@ -86,7 +86,7 @@ const CartDropdown = ({
             data-testid="nav-cart-link"
           >
             <CounterBadge count={totalItems} showZero={false} dot={true}>
-              <ShoppingCart />
+              <ShoppingCart aria-label={"Cart"} />
             </CounterBadge>
           </LocalizedClientLink>
         </Popover.Button>
