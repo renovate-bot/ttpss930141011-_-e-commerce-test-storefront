@@ -3,7 +3,7 @@
 import { Popover, Transition } from "@headlessui/react"
 import { Cart } from "@medusajs/medusa"
 import { Button } from "@medusajs/ui"
-import { useParams, usePathname } from "next/navigation"
+import { usePathname } from "next/navigation"
 import { Fragment, useEffect, useRef, useState } from "react"
 
 import { formatAmount } from "@lib/util/prices"
@@ -25,7 +25,7 @@ const CartDropdown = ({
   )
   const [cartDropdownOpen, setCartDropdownOpen] = useState(false)
 
-  const { countryCode } = useParams()
+  // const { countryCode } = useParams()
 
   const open = () => setCartDropdownOpen(true)
   const close = () => setCartDropdownOpen(false)
@@ -86,7 +86,7 @@ const CartDropdown = ({
             data-testid="nav-cart-link"
           >
             <CounterBadge count={totalItems} showZero={false} dot={true}>
-              <ShoppingCart />
+              <ShoppingCart aria-label={"Cart"} />
             </CounterBadge>
           </LocalizedClientLink>
         </Popover.Button>
