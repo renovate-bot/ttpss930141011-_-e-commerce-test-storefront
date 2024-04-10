@@ -1,5 +1,3 @@
-import {Text} from "@medusajs/ui"
-
 import {ProductPreviewType} from "types/global"
 
 import {retrievePricedProductById} from "@lib/data"
@@ -43,9 +41,9 @@ export default async function ProductPreview({
                     size="full"
                     isFeatured={isFeatured}
                 />
-                <div className="flex txt-compact-medium mt-4 justify-between">
-                    <Text className="text-ui-fg-subtle font-semibold"
-                          data-testid="product-title">{productPreview.title}</Text>
+                <div className="flex flex-col sm:flex-row mt-4 justify-between">
+                    <p className="text-slate-900 font-light text-lg"
+                          data-testid="product-title">{productPreview.title}</p>
                     <div className="flex items-center gap-x-2">
                         {cheapestPrice && <PreviewPrice price={cheapestPrice}/>}
                     </div>

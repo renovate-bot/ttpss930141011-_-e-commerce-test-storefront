@@ -1,10 +1,9 @@
 import { Region } from "@medusajs/medusa"
-import { Text } from "@medusajs/ui"
+import { clx } from "@medusajs/ui"
 
 import InteractiveLink from "@modules/common/components/interactive-link"
 import ProductPreview from "@modules/products/components/product-preview"
 import { ProductCollectionWithPreviews } from "types/global"
-import clsx from "clsx"
 
 export default function ProductRail({ collection, region, index }: {
   collection: ProductCollectionWithPreviews
@@ -21,11 +20,11 @@ export default function ProductRail({ collection, region, index }: {
 
 
   return (
-    <div className={clsx(index % 2 === 0 ? "bg-[#e7d6bc]" : "bg-[#f8f1f1]", "w-full")}>
+    <div className={clx(index % 2 === 0 ? "bg-[#fff9eb]" : "bg-[#ffffff]", "w-full")}>
       <div className="content-container py-12 small:py-24">
 
         <div className="flex justify-between mb-8">
-          <Text className="txt-xlarge">{collection.title}</Text>
+          <p className="text-3xl">{collection.title}</p>
           <InteractiveLink href={`/collections/${collection.handle}`}>
             View all
           </InteractiveLink>

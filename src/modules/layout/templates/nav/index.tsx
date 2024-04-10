@@ -14,7 +14,7 @@ export default async function Nav() {
     <div className="sticky top-0 inset-x-0 z-50 group">
       <header className="relative h-16 mx-auto border-b duration-200 bg-[#f9f7e9] border-ui-border-base">
         <nav
-          className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
+          className="content-container text-base text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
 
           <div className="flex items-center gap-x-3 md:gap-x-6 h-full flex-1 basis-0 justify-start">
             <div className="flex md:hidden flex-1 basis-0 h-full items-center">
@@ -68,7 +68,7 @@ export default async function Nav() {
                   scroll={false}
                   data-testid="nav-search-link"
                 >
-                  <MagnifyingGlass />
+                  <MagnifyingGlass aria-label="Search" />
                 </LocalizedClientLink>
               )}
               {/*<LocalizedClientLink*/}
@@ -88,7 +88,7 @@ export default async function Nav() {
                   data-testid="nav-cart-link"
                 >
                   {/*Cart (0)*/}
-                  <ShoppingCart />
+                  <ShoppingCart aria-label="Cart" />
                 </LocalizedClientLink>
               }
             >
