@@ -41,7 +41,7 @@ export default async function ProductPreview({
                     size="full"
                     isFeatured={isFeatured}
                 />
-                <div className="flex mt-4 justify-between">
+                <div className="flex flex-col sm:flex-row mt-4 justify-between">
                     <p className="text-slate-900 font-light text-lg"
                           data-testid="product-title">{productPreview.title}</p>
                     <div className="flex items-center gap-x-2">
