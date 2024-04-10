@@ -6,7 +6,7 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
-import ProductCarousel from "@modules/home/components/featured-products/product-carousel"
+// import ProductCarousel from "@modules/home/components/featured-products/product-carousel"
 
 export const metadata: Metadata = {
   title: "Nick's Sweet Treats: Artisanal Cookies Delivered to Your Door",
@@ -83,9 +83,9 @@ export default async function Home({
           <FeaturedProducts collections={collections} region={region} />
         </ul>
         {/*    Products carousel*/}
-        <ul className="flex flex-col gap-x-6">
-          <ProductCarousel products={products} />
-        </ul>
+        {/*<ul className="flex flex-col gap-x-6">*/}
+        {/*  <ProductCarousel products={products} />*/}
+        {/*</ul>*/}
       </div>
     </>
   )
