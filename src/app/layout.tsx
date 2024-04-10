@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import "styles/globals.css"
-import { inter } from "./fonts"
+import { patuaOne } from "./fonts"
 import { ReactNode } from "react"
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://localhost:8000"
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout(props: { children: ReactNode }) {
   return (
-    <html lang="en" data-mode="light" className={inter.className}>
+    <html lang="en" data-mode="light" className={patuaOne.className}>
     <body>
     <main className="relative">{props.children}</main>
     </body>

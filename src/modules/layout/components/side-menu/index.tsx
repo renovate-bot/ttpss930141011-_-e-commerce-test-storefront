@@ -32,7 +32,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
               <div className="relative flex h-full">
                 <Popover.Button data-testid="nav-menu-button"
                                 className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base">
-                  <BarsThree />
+                  <BarsThree aria-label="Menu" />
                 </Popover.Button>
               </div>
 
@@ -51,9 +51,9 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                   <div data-testid="nav-menu-popup"
                        className="flex flex-col h-full bg-[rgba(33,22,12,0.8)] justify-between p-3">
                     <div className="flex flex-col gap-y-6">
-                      <div className="flex justify-start" id="xmark">
+                      <div className="flex justify-end" id="xmark">
                         <button data-testid="close-menu-button" onClick={close}>
-                          <XMark />
+                          <XMark aria-label="Close menu" />
                         </button>
                       </div>
                       <ul className="flex flex-col gap-6 items-start justify-start">
@@ -72,8 +72,6 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                               </li>
                               <hr className="w-full border-ui-border-base" />
                             </>
-
-
                           )
                         })}
                       </ul>
