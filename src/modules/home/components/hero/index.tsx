@@ -1,4 +1,4 @@
-import { Heading, clx } from "@medusajs/ui"
+import { clx } from "@medusajs/ui"
 import Cookie1 from "../../../../../public/images/hero/banner.webp"
 import Image from "next/image"
 import { cookie } from "../../../../app/fonts"
@@ -24,12 +24,9 @@ const Hero = () => {
         className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
         <div className="rounded-lg bg-[#fcf3e7] bg-opacity-80 p-8">
           <div className="border border-slate-500 p-8 rounded-lg bg-opacity-80">
-            <Heading
-              level="h1"
-              className={clx("text-5xl leading-10 text-ui-fg-base font-normal", cookie.className)}
-            >
+            <h1 className={clx("text-5xl leading-10 text-ui-fg-base font-normal", cookie.className)}>
               Welcome to Nick's Sweet Treats
-            </Heading>
+            </h1>
             <h2 className={"text-2xl leading-10 text-ui-fg-subtle font-normal"}>
               Artisanal Cookies Delivered to Your Door
             </h2>
