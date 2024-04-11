@@ -1,5 +1,5 @@
 import { clx } from "@medusajs/ui"
-import Cookie1 from "../../../../../public/images/hero/banner.webp"
+import banner from "../../../../../public/images/hero/banner.webp"
 import Image from "next/image"
 import { cookie } from "../../../../app/fonts"
 
@@ -11,10 +11,10 @@ const Hero = () => {
     >
       <div className="w-full h-full fixed left-0 top-0">
         <Image
-          src={Cookie1.src}
-          alt="Cookie"
-          layout="fill"
-          objectFit="cover"
+          src={banner.src}
+          alt="Cookie banner"
+          className={"object-cover"}
+          fill={true}
           quality={100}
           priority
         />

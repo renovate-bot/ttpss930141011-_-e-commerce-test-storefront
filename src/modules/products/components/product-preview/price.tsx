@@ -4,9 +4,9 @@ import { PriceType } from "../product-actions"
 
 export default async function PreviewPrice({ price }: { price: PriceType }) {
   return (
-    <>
+    <span className={"flex gap-1 flex-col md:flex-row"}>
       {price.price_type === "sale" && (
-        <p className="line-through text-ui-fg-muted" data-testid="original-price">
+        <p className="line-through text-ui-fg-muted text-lg" data-testid="original-price">
           {price.original_price}
         </p>
       )}
@@ -18,6 +18,6 @@ export default async function PreviewPrice({ price }: { price: PriceType }) {
       >
         {price.calculated_price}
       </p>
-    </>
+    </span>
   )
 }
