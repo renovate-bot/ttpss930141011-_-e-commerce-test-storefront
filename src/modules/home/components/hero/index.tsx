@@ -1,5 +1,4 @@
 import { clx } from "@medusajs/ui"
-import banner from "../../../../../public/images/hero/banner.webp"
 import Image from "next/image"
 import { cookie } from "../../../../app/fonts"
 
@@ -11,7 +10,7 @@ const Hero = () => {
     >
       <div className="w-full h-full fixed left-0 top-0">
         <Image
-          src={banner.src}
+          src={`${process.env.NEXT_PUBLIC_S3_BUCKET_URL}/banner.webp`}
           alt="Cookie banner"
           className={"object-cover"}
           fill={true}
