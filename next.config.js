@@ -13,10 +13,14 @@ const nextConfig = withStoreConfig({
         protocol: "http",
         hostname: "localhost",
       },
+      // {
+      //   protocol: "https",
+      //   hostname: "nick-sweet-treats-server-production.up.railway.app",
+      // },
       {
         protocol: "https",
-        hostname: "nick-sweet-treats-server-production.up.railway.app",
-      }
+        hostname:"nick-sweet-treats-server.s3.us-east-2.amazonaws.com",
+      },
     ],
   },
 })

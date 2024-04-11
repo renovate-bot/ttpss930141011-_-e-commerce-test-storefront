@@ -5,7 +5,7 @@ import { getCategoriesList, getCollectionsList } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 // import MedusaCTA from "@modules/layout/components/medusa-cta"
 import Image from "next/image"
-import Logo from "../../../../../public/images/logo/logo-transparent-png.png"
+// import Logo from "../../../../../public/images/logo/logo.png"
 
 export default async function Footer() {
   const { collections } = await getCollectionsList(0, 6)
@@ -20,7 +20,8 @@ export default async function Footer() {
               href="/"
               className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             >
-              <Image src={Logo.src} alt={"Logo"} width={0} height={0} className="w-full h-auto" sizes="(max-width: 768px) 60vw, 40vw"/>
+              <Image src={`${process.env.NEXT_PUBLIC_S3_BUCKET_URL}/logo.png`} alt={"Logo"} width={0} height={0}
+                     className="w-full h-auto" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 35vw, 20vw" />
             </LocalizedClientLink>
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">

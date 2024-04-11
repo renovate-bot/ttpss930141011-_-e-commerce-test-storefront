@@ -5,7 +5,7 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
 import Image from "next/image"
-import Logo from "../../../../../public/images/logo/logo-transparent-png.png"
+// import Logo from "../../../../../public/images/logo/logo.png"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -17,12 +17,12 @@ export default async function Nav() {
           className="content-container text-base text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
 
           <div className="flex items-center gap-x-3 md:gap-x-6 h-full flex-1 basis-0 justify-start">
-            <div className="flex md:hidden flex-1 basis-0 h-full items-center">
+            <div className="flex lg:hidden flex-1 basis-0 h-full items-center">
               <div className="h-full">
                 <SideMenu regions={regions} />
               </div>
             </div>
-            <div className="hidden md:flex items-center gap-x-3 md:gap-x-6 h-full">
+            <div className="hidden lg:flex items-center gap-x-3 md:gap-x-6 h-full">
               <LocalizedClientLink
                 className="hover:text-ui-fg-base"
                 href="/"
@@ -54,8 +54,8 @@ export default async function Nav() {
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
-              <Image src={Logo.src} alt={"Logo"} width={0} height={0} className="w-full h-auto"
-                     sizes="(max-width: 640px) 50vw, 30vw" />
+              <Image src={`${process.env.NEXT_PUBLIC_S3_BUCKET_URL}/logo.png`} alt={"Logo"} width={0} height={0}
+                     className="w-full h-auto" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 35vw, 20vw" />
             </LocalizedClientLink>
           </div>
 

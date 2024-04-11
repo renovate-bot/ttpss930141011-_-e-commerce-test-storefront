@@ -70,11 +70,13 @@ const Carousel = React.forwardRef<
         {
           delay: 3000,
           stopOnInteraction: false,
+          stopOnMouseEnter: true,
         },
       )] : [AutoScroll({
         speed: 0.5,
         startDelay: 0,
         stopOnInteraction: false,
+        stopOnMouseEnter: true,
       })],
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)

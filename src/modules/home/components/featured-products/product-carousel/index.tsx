@@ -36,10 +36,10 @@ export default function ProductCarousel({ collection, region, index/* showType =
         </div>
         <div className="flex">
           <Carousel className={"w-full"} pluginsOptions={index % 2 === 0 ? "autoscroll" : "autoplay"}>
-            <CarouselContent className={"-ml-1"}>
+            <CarouselContent className={"-ml-2"}>
               {
                 products && products.map((product) => (
-                  <CarouselItem key={product.id} className={"pl-1 basis-1/3"}>
+                  <CarouselItem key={product.id} className={"pl-2 basis-1/3"}>
                     <ProductPreview
                       productPreview={product}
                       region={region}
