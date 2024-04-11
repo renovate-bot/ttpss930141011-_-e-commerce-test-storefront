@@ -54,7 +54,8 @@ export default async function Nav() {
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
-              <Image src={Logo.src} alt={"Logo"} width={220} height={200} />
+              <Image src={Logo.src} alt={"Logo"} width={0} height={0} className="w-full h-auto"
+                     sizes="(max-width: 640px) 50vw, 30vw" />
             </LocalizedClientLink>
           </div>
 

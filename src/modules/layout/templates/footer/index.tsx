@@ -20,7 +20,7 @@ export default async function Footer() {
               href="/"
               className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             >
-              <Image src={Logo.src} alt={"Logo"} width={300} height={200} />
+              <Image src={Logo.src} alt={"Logo"} width={0} height={0} className="w-full h-auto" sizes="(max-width: 768px) 60vw, 40vw"/>
             </LocalizedClientLink>
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">

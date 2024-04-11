@@ -59,37 +59,35 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                       <ul className="flex flex-col gap-6 items-start justify-start">
                         {Object.entries(PrimarySideMenuItems).map(([name, href]) => {
                           return (
-                            <>
-                              <li key={name}>
-                                <LocalizedClientLink
-                                  href={href}
-                                  className="leading-10 hover:text-ui-fg-disabled"
-                                  onClick={close}
-                                  data-testid={`${name.toLowerCase()}-link`}
-                                >
-                                  {name}
-                                </LocalizedClientLink>
-                              </li>
+
+                            <li className={"w-full"} key={`PrimarySideMenuItems_${name}`}>
+                              <LocalizedClientLink
+                                href={href}
+                                className="leading-10 hover:text-ui-fg-disabled"
+                                onClick={close}
+                                data-testid={`${name.toLowerCase()}-link`}
+                              >
+                                {name}
+                              </LocalizedClientLink>
                               <hr className="w-full border-ui-border-base" />
-                            </>
+                            </li>
+
                           )
                         })}
                       </ul>
                       <ul className={"flex flex-col items-start justify-start"}>
                         {Object.entries(SecondarySideMenuItems).map(([name, href]) => {
                           return (
-                            <>
-                              <li key={name}>
-                                <LocalizedClientLink
-                                  href={href}
-                                  className="leading-10 hover:text-ui-fg-disabled text-gray-400 font-light"
-                                  onClick={close}
-                                  data-testid={`${name.toLowerCase()}-link`}
-                                >
-                                  {name}
-                                </LocalizedClientLink>
-                              </li>
-                            </>
+                            <li key={`SecondarySideMenuItems${name}`}>
+                              <LocalizedClientLink
+                                href={href}
+                                className="leading-10 hover:text-ui-fg-disabled text-gray-400 font-light"
+                                onClick={close}
+                                data-testid={`${name.toLowerCase()}-link`}
+                              >
+                                {name}
+                              </LocalizedClientLink>
+                            </li>
                           )
                         })}
                       </ul>
